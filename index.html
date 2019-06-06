@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UI Elements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tabs">
+		
+		<div class="tabs__sidebar">
+			<button class="tabs__addBtn">+</button>
+			<button class="tabs__btn tabs__btn--active tabBtn" data-tab-nr="1">Tab1
+				<span class="tabBtn__deleteTab">
+                    <img src="delete-icon.png" class="del__icon">
+                </span>
+			</button>
+            <button class="tabs__btn tabBtn" data-tab-nr="2">Tab2
+				<span class="tabBtn__deleteTab">X</span>
+			</button>
+            <button class="tabs__btn tabBtn" data-tab-nr="3">Tab3
+				<span class="tabBtn__deleteTab">X</span>
+			</button>
+        </div>
+        <div class="tabs__content tabs__content--active" data-content-nr="1">
+            asd1
+        </div>
+        <div class="tabs__content" data-content-nr="2">
+            asd2
+        </div>
+        <div class="tabs__content" data-content-nr="3">
+            asd3
+		</div>
+	</div>
+</body>
+<script src="script.js"></script>
+
+
+</html>

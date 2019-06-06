@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 50vh; 
+    --textColor: #251E25;
+    --primaryColor:#7ec6e5;
+    --secondaryColor: #dd973b;
+    --activeColor:#FB4D3D;
+}
+.tabs{
+    height: 50vh;
+    color: var(--textColor);
+}
+
+.tabs__sidebar{
+    height:10%;
+    display: flex;
+}
+
+
+.tabs__btn {
+    background:var(--primaryColor);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    flex:15% 0 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.tabs__content{
+    background: var(--secondaryColor);
+    display: none;
+    padding: 2rem;
+
+}
+
+.tabs__content--active{
+    display: block;
+    height:90%;
+}
+
+.tabs__btn--active{
+    background: var(--secondaryColor);
+}
+
+
+.tabs__btn--active, .tabs__content--active {
+    background:var(--secondaryColor);
+}
+
+.del__icon{
+    width: 30px;
+    height: 30px;
+}
