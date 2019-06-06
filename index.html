@@ -1,41 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>UI Elements</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="tabs">
-		
-		<div class="tabs__sidebar">
-			<button class="tabs__addBtn">+</button>
-			<button class="tabs__btn tabs__btn--active tabBtn" data-tab-nr="1">Tab1
-				<span class="tabBtn__deleteTab">
-                    <img src="delete-icon.png" class="del__icon">
-                </span>
-			</button>
-            <button class="tabs__btn tabBtn" data-tab-nr="2">Tab2
-				<span class="tabBtn__deleteTab">X</span>
-			</button>
-            <button class="tabs__btn tabBtn" data-tab-nr="3">Tab3
-				<span class="tabBtn__deleteTab">X</span>
-			</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>UI Elements</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="tabs">
+            <div class="tabs__sidebar">
+                <div class="tabs__addBtn">
+                    <img class="addBtn__icon" src="img/add.png" title="Open a new tab">
+                </div>
+                <div class="tabs__btn tabs__btn--active tabBtn" data-tab-nr="1">
+                    <img src="img/chrome.png" class="tab__icon">
+                    <span class="tab__title">Tab 1</span>
+                    <span class="tabBtn__deleteTab">
+                        <img src="img/delete-icon.png" class="del__icon" title="Close tab">
+                    </span>
+                </div>
+                <div class="tabs__btn tabBtn" data-tab-nr="2">
+                    <img src="img/youtube.png" class="tab__icon">
+                    <span class="tab__title">Tab 2</span>
+                    <span class="tabBtn__deleteTab">
+                        <img src="img/delete-icon.png" class="del__icon" title="Close tab">
+                    </span>
+                </div>
+                <div class="tabs__btn tabBtn" data-tab-nr="3">
+                    <img src="img/facebook.png" class="tab__icon">
+                    <span class="tab__title">Tab 3</span>
+                    <span class="tabBtn__deleteTab">
+                        <img src="img/delete-icon.png" class="del__icon" title="Close tab">
+                    </span>
+                </div>
+            </div>
+            <div class="tabs__content tabs__content--active" data-content-nr="1">
+                Tab's content 1
+            </div>
+            <div class="tabs__content" data-content-nr="2">
+                Tab's content 2
+            </div>
+            <div class="tabs__content" data-content-nr="3">
+                Tab's content 3
+            </div>
         </div>
-        <div class="tabs__content tabs__content--active" data-content-nr="1">
-            asd1
-        </div>
-        <div class="tabs__content" data-content-nr="2">
-            asd2
-        </div>
-        <div class="tabs__content" data-content-nr="3">
-            asd3
-		</div>
-	</div>
-</body>
-<script src="script.js"></script>
-
-
+        <script src="script.js"></script>
+    </body>
 </html>

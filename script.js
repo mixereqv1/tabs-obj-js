@@ -1,32 +1,33 @@
 var Tabs = {
 
     addTabAndContentBtn: document.querySelector('.tabs__addBtn'),
+    images: ['chrome.png','facebook.png','firefox.png','youtube.png'],
 
     getTabsBtn: function() {
         const tabsBtn = document.querySelectorAll('.tabs__btn');
-        return tabsBtn
+        return tabsBtn;
     },
 
     getTabsContent: function() {
         const tabsContent = document.querySelectorAll('.tabs__content');
-        return tabsContent
+        return tabsContent;
     },
 
     getDeleteBtn: function() {
         const deleteBtn = document.querySelectorAll('.tabBtn__deleteTab');
-        return deleteBtn
+        return deleteBtn;
     },
 
     getSideBar: function() {
         const SideBar = document.querySelector('.tabs__sidebar');
-        return SideBar
+        return SideBar;
     },
 
     getLastNrTab: function() {
-        return [...this.getSideBar().children].pop()
+        return [...this.getSideBar().children].pop();
     },
     getLastNrContent: function() {
-        return [...this.getTabsContent().children].pop()
+        return [...this.getTabsContent().children].pop();
     },
 
     updateTabsList: function() {
@@ -67,26 +68,44 @@ var Tabs = {
     },
 
     addNewTab: function(tabSidebar) {
+        let iconNumber = Math.floor(Math.random() * 4) + 1;
+
         let last = parseInt([...this.getSideBar().children].pop().dataset.tabNr);
-        let newButton = document.createElement('button');
-        tabSidebar.appendChild(newButton);
-        newButton.innerText = `Tabs ${last + 1}`;
+        let newButton = document.createElement('div');
+        let tabIcon = document.createElement('img');
+        let tabTitle = document.createElement('span');
+
+        tabIcon.src = 'img/' + this.images[iconNumber];
+
         newButton.classList.add("tabs__btn");
+        tabTitle.classList.add('tab__title');
+        tabIcon.classList.add('tab__icon');
+
+        tabTitle.innerText = `Tab ${last + 1}`;  
         newButton.dataset.tabNr = last + 1;
+
+        tabSidebar.appendChild(newButton);
+        newButton.appendChild(tabIcon);
+        newButton.appendChild(tabTitle);
+        
         return newButton;
     },
 
     addNewDeleteBtn: function(newButton) {
         let newDeleteBtn = document.createElement('span');
-        newDeleteBtn.innerText = 'X';
+        let delIcon = document.createElement('img');
         newDeleteBtn.classList.add("tabBtn__deleteTab");
+        delIcon.classList.add('del__icon');
+        delIcon.src = 'img/delete-icon.png';
+        delIcon.title = 'Close tab';
         newButton.appendChild(newDeleteBtn);
+        newDeleteBtn.appendChild(delIcon);
     },
 
     addNewContent: function(tabSidebar) {
         let last = parseInt([...this.getSideBar().children].pop().dataset.tabNr);
         let newContent = document.createElement('div');
-        newContent.innerText = `asd ${last}`;
+        newContent.innerText = `Tab's content ${last}`;
         newContent.classList.add("tabs__content");
         newContent.dataset.contentNr = last;
         tabSidebar.parentElement.appendChild(newContent);
@@ -94,7 +113,8 @@ var Tabs = {
 
     addTabAndContent: function() {
         this.addTabAndContentBtn.addEventListener('click', (event) => {
-            let tabSidebar = event.target.parentElement;
+            let temp = event.target.parentElement;
+            let tabSidebar = temp.parentElement;
             let newButton = this.addNewTab(tabSidebar);
 
             this.addNewDeleteBtn(newButton);
@@ -115,3 +135,8 @@ var Tabs = {
 }
 
 Tabs.init();
+
+
+// RANDOM IMAGE ON TAB
+
+

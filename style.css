@@ -1,35 +1,54 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-html, body {
-    height: 50vh; 
+body {
+    height: 100vh; 
     --textColor: #251E25;
-    --primaryColor:#7ec6e5;
-    --secondaryColor: #dd973b;
+    --primaryColor:#FFFFEA;
+    --secondaryColor: #E15050;
     --activeColor:#FB4D3D;
+    --addBtnColor: #30343F;
 }
 .tabs{
-    height: 50vh;
+    height: 100%;
     color: var(--textColor);
 }
 
 .tabs__sidebar{
-    height:10%;
     display: flex;
+    height: 3%;
 }
-
 
 .tabs__btn {
     background:var(--primaryColor);
     outline: none;
     border: none;
     cursor: pointer;
-    height: 100%;
-    flex:15% 0 1;
+    height: 30px;
+    flex: 10% 0 1;
     display: flex;
     align-items: center;
-    justify-content: center;   
+    padding: 10px 5px;
+}
+
+.tab__title{
+    width: 75%;
+    margin-left: 5px;
+}
+
+.tabs__addBtn{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--addBtnColor);
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
 
 .tabs__content{
@@ -41,7 +60,7 @@ html, body {
 
 .tabs__content--active{
     display: block;
-    height:90%;
+    height: 97%;
 }
 
 .tabs__btn--active{
@@ -53,7 +72,34 @@ html, body {
     background:var(--secondaryColor);
 }
 
+/* ICONS */
+
+.tab__icon{
+    width: 20px;
+    height: 20px;
+}
+
+.addBtn__icon{
+    width: 20px;
+    height: 20px;
+    color: #FFFFEA;
+}
+
 .del__icon{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+    margin: 10px 0 10px 0;
+    display: none;
+    opacity: .7;
+    transition: all .3s ease;
+    background: rgb(31, 30, 31);
+    cursor: pointer;
+}
+
+.del__icon:hover{
+    opacity: 1;
+}
+
+.tabs__btn:hover .del__icon{
+    display: block;
 }
