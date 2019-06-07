@@ -54,7 +54,7 @@ var Tabs = {
         this.getDeleteBtn().forEach((delButton) => {
             delButton.addEventListener('click', (e) => {
                 let buttonParent = delButton.parentElement;
-                let tabNr = buttonParent.dataset.tabNr
+                let tabNr = buttonParent.dataset.tabNr;
                 this.getTabsContent().forEach(content => {
                     let contentNr = content.dataset.contentNr;;
                     if (contentNr === tabNr) {
