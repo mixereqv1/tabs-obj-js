@@ -1,7 +1,7 @@
 var Tabs = {
 
     addTabAndContentBtn: document.querySelector('.tabs__addBtn'),
-    images: ['chrome.png','facebook.png','firefox.png','youtube.png'],
+    images: ['','chrome.png','facebook.png','firefox.png','youtube.png'],
 
     getTabsBtn: function() {
         const tabsBtn = document.querySelectorAll('.tabs__btn');
