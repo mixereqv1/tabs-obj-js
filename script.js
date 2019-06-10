@@ -47,7 +47,7 @@ var Tabs = {
                     }
                 })
             })
-        })
+        })     
     },
 
     updateDeleteBtn: function() {
@@ -126,6 +126,10 @@ var Tabs = {
         })
     },
 
+    // updateActiveClass: function(){
+        
+    // },
+
     init: function() {
         this.updateTabsList();
         this.updateDeleteBtn();
@@ -135,8 +139,3 @@ var Tabs = {
 }
 
 Tabs.init();
-
-
-// RANDOM IMAGE ON TAB
-
-

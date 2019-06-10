@@ -20,6 +20,7 @@ body {
 .tabs__sidebar{
     display: flex;
     height: 3%;
+    background: var(--primaryColor);
 }
 
 .tabs__btn {
@@ -27,12 +28,14 @@ body {
     outline: none;
     border: none;
     cursor: pointer;
-    height: 30px;
-    flex: 10% 0 1;
+    height: 100%;
+    flex: 15% 0 1;
     display: flex;
     align-items: center;
     padding: 10px 5px;
     border-radius: 5px;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
 }
 
 .tab__title{
@@ -41,7 +44,7 @@ body {
 }
 
 .tabs__addBtn{
-    height: 30px;
+    height: 100%;
     width: 30px;
     display: flex;
     justify-content: center;
