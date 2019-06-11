@@ -19,7 +19,7 @@ body {
 
 .tabs__sidebar{
     display: flex;
-    height: 3%;
+    flex-wrap: wrap;
     background: var(--primaryColor);
 }
 
@@ -29,23 +29,22 @@ body {
     border: none;
     cursor: pointer;
     height: 100%;
-    flex: 15% 0 1;
+    width: 100%;
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
     padding: 10px 5px;
-    border-radius: 5px;
-    border-right: 1px solid #000;
-    border-left: 1px solid #000;
 }
 
 .tab__title{
-    width: 75%;
+    width: 90%;
     margin-left: 5px;
 }
 
 .tabs__addBtn{
     height: 100%;
-    width: 30px;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,12 +59,12 @@ body {
     background: var(--secondaryColor);
     display: none;
     padding: 2rem;
-
+    width: 100%;
 }
 
 .tabs__content--active{
     display: block;
-    height: 97%;
+    height: 96%;
 }
 
 .tabs__btn--active{
@@ -85,15 +84,16 @@ body {
 }
 
 .addBtn__icon{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
     color: #FFFFEA;
 }
 
 .del__icon{
     width: 20px;
     height: 20px;
-    margin: 10px 0 10px 0;
+    /* margin: 10px 0 10px 0; */
     display: none;
     opacity: .7;
     transition: all .3s ease;

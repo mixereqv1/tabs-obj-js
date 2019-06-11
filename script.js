@@ -1,4 +1,4 @@
-var Tabs = {
+const Tabs = {
 
     addTabAndContentBtn: document.querySelector('.tabs__addBtn'),
     images: ['','chrome.png','facebook.png','firefox.png','youtube.png'],
